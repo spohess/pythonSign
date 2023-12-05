@@ -1,0 +1,28 @@
+
+usage:
+    python sign.py original_file output_file cert_file cert_password [second_cert_file] [second_cert_password]
+    python sign.py storage/tmp/original.pdf storage/files/sign_20230101.pdf storage/certs/user_876564.pfx SECRET_PASSWORD [storage/certs/user_065875.pfx] [OTHER_SECRET_PASSWORD]
+
+options:
+    original_file
+        - required
+        - type: .pdf
+        - with path (example: /var/www/path/file.pdf)
+    output_file
+        - required
+        - type: .pdf
+        - with path (example: /var/www/path/file)
+    cert_file
+        - required
+        - extension: .pfx
+        - with path (example: /var/www/path/cert.pfx)
+    cert_password
+        - required
+        - type: string
+    second_cert_file
+        - optional
+        - extension: .pfx
+        - with path (example: /var/www/path/cert.pfx)
+    second_cert_password
+        - optional
+        - type: string
