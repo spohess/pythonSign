@@ -43,10 +43,14 @@ from erpbrasil.assinatura.certificado import Certificado
 ##     python sign.py storage/tmp/original.pdf storage/files/sign_20230101.pdf storage/certs/user_876564.pfx SECRET_PASSWORD storage/certs/user_065875.pfx OTHER_SECRET_PASSWORD
 ##################################################
 
+if sys.argv[1] == '--help':
+    with open('options', 'r') as f:
+        print(f.read())
+    exit(400)
+
 if len(sys.argv) < 5:
     with open('options', 'r') as f:
         print(f.read())
-
     exit(400)
 
 ##################################################
